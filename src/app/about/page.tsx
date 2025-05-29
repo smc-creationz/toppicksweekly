@@ -1,10 +1,10 @@
+// about/page.tsx
 export default function AboutPage() {
   return (
-    <main className="p-6 max-w-3xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">About Us</h1>
-      <p className="text-sm leading-relaxed">
-        Top Picks Weekly is a curated site showcasing Amazon's top-rated and best-selling products.
-        Each week we handpick standout items based on popularity, performance, and customer reviews.
+    <main className="max-w-4xl mx-auto px-6 py-12">
+      <h1 className="text-3xl font-bold mb-4">About Us</h1>
+      <p className="text-gray-700">
+        Welcome to Top Picks Weekly — your trusted source for curated product recommendations. Our mission is to help you find the best products each week without the hassle of endless browsing. We&apos;re powered by research, experience, and a sprinkle of AI magic to ensure every item we feature is worth your time.
       </p>
     </main>
   );

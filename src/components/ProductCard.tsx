@@ -1,38 +1,29 @@
-type ProductCardProps = {
-  title: string;
-  image: string;
-  summary: string;
-  buyLink: string;
-  badge?: string;
+import Image from "next/image";
+import { Product } from "@/types/Product";
+
+type Props = {
+  product: Product;
 };
 
-export default function ProductCard({ title, image, summary, buyLink, badge }: ProductCardProps) {
+export default function ProductCard({ product }: Props) {
   return (
-    <div className="border p-4 rounded-xl shadow-md hover:shadow-lg transition bg-white">
-      <div className="w-full h-48 overflow-hidden rounded">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover"
+    <div className="border p-4 rounded-md shadow hover:shadow-md transition">
+      <a href={product.buyLink} target="_blank" rel="noopener noreferrer">
+        <Image
+          src={product.image}
+          alt={product.title}
+          width={300}
+          height={300}
+          className="w-full object-cover rounded"
         />
-      </div>
-      <div className="mt-4">
-        <h2 className="text-lg font-semibold">{title}</h2>
-        {badge && (
-          <span className="inline-block text-sm bg-yellow-300 text-black px-2 py-1 rounded-full mt-1">
-            {badge}
+        <div className="mt-2">
+          <h2 className="text-lg font-semibold">{product.title}</h2>
+          <p className="text-sm text-gray-600">{product.summary}</p>
+          <span className="inline-block mt-2 text-xs text-white bg-blue-500 px-2 py-1 rounded">
+            {product.badge}
           </span>
-        )}
-        <p className="text-sm mt-2">{summary}</p>
-        <a
-          href={buyLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-3 text-blue-600 hover:underline"
-        >
-          View on Amazon →
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
   );
 }
