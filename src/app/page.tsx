@@ -3,6 +3,13 @@
 
 
 import WeeklyGrid from "@/components/WeeklyGrid";
+import MaintenancePage from "./maintenance/page";
+
+function MyApp({ Component, pageProps }: { Component: React.ComponentType<any>; pageProps: Record<string, unknown> }) {
+  const isMaintenance = true;
+  if (isMaintenance) return <MaintenancePage />;
+  return <Component {...pageProps} />;
+}
 
 export default function HomePage() {
   return (
