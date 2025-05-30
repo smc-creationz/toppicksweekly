@@ -2,9 +2,13 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const maintenanceMode = true;
+  const isMaintenance = true;
 
-  if (maintenanceMode && !request.nextUrl.pathname.startsWith('/maintenance')) {
+  if (
+    isMaintenance &&
+    !request.nextUrl.pathname.startsWith('/maintenance') &&
+    !request.nextUrl.pathname.startsWith('/_next')
+  ) {
     return NextResponse.redirect(new URL('/maintenance', request.url));
   }
 

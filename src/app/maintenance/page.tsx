@@ -1,14 +1,10 @@
-export default function MaintenancePage() {
+export default function Maintenance() {
   return (
-    <main className="p-6 max-w-3xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Affiliate Disclaimer</h1>
-      <p className="text-sm leading-relaxed">
-        We'll be back soon!
-        We're currently doing maintenance. Thanks for your patience.
-      </p>
-      <p className="text-sm mt-4 leading-relaxed">
-        As an Amazon Associate, we earn from qualifying purchases.
-      </p>
-    </main>
+    <div className="flex items-center justify-center h-screen text-center">
+      <div>
+        <h1 className="text-4xl font-bold mb-4">Under Maintenance</h1>
+        <p>We’ll be back shortly!</p>
+      </div>
+    </div>
   );
 }
