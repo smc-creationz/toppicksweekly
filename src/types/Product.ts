@@ -4,4 +4,5 @@ export type Product = {
   summary: string;
   buyLink: string;
   badge: string;
+  categorySlug: string;
 };

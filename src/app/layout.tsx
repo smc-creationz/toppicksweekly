@@ -1,47 +1,22 @@
-// layout.tsx
 import "./globals.css";
-import Link from "next/link";
+import type { Metadata } from "next";
+import Header from "@/components/Header";
+
+export const metadata: Metadata = {
+  title: "Top Picks Weekly",
+  description: "Curated Amazon product recommendations updated weekly.",
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="font-sans text-gray-900 bg-gray-50">
-        {/* NavBar */}
-        <header className="bg-white shadow sticky top-0 z-50">
-          <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link href="/" className="text-xl font-bold text-blue-600">Top Picks Weekly</Link>
-            
-           <nav className="flex space-x-6 text-sm font-medium text-gray-700 items-center relative">
-  <Link href="/" className="hover:text-blue-600">This Week’s Picks</Link>
-
-  {/* Dropdown */}
-  <div className="relative group">
-    <button className="hover:text-blue-600">Top Picks by Category ▾</button>
-    <div className="absolute hidden group-hover:block bg-white border mt-2 rounded shadow-md z-50 min-w-[200px]">
-      <Link href="/category/home-kitchen" className="block px-4 py-2 hover:bg-gray-100">Home & Kitchen</Link>
-      <Link href="/category/electronics" className="block px-4 py-2 hover:bg-gray-100">Electronics</Link>
-      <Link href="/category/pets" className="block px-4 py-2 hover:bg-gray-100">Pet Supplies</Link>
-      <Link href="/category/health" className="block px-4 py-2 hover:bg-gray-100">Health & Personal Care</Link>
-      <Link href="/category/toys" className="block px-4 py-2 hover:bg-gray-100">Toys & Games</Link>
-    </div>
-  </div>
-
-  <Link href="/about" className="hover:text-blue-600">About Us</Link>
-  <Link href="/privacy" className="hover:text-blue-600">Privacy</Link>
-  <Link href="/disclaimer" className="hover:text-blue-600">Disclaimer</Link>
-</nav>
-
-          </div>
-        </header>
-
-        {/* Page Content */}
+    <html lang="en" className="dark">
+      <body className="font-sans text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white">
+        <Header />
         {children}
-
-        {/* Footer */}
-        <footer className="text-center text-sm text-gray-600 mt-12 p-4 border-t bg-white">
+        <footer className="text-center text-sm text-gray-600 dark:text-gray-400 mt-12 p-4 border-t dark:border-gray-700 bg-white dark:bg-gray-800">
           <p>
-            <Link href="/privacy" className="underline mr-4">Privacy Policy</Link>
-            <Link href="/disclaimer" className="underline">Affiliate Disclaimer</Link>
+            <a href="/privacy" className="underline mr-4">Privacy Policy</a>
+            <a href="/disclaimer" className="underline">Affiliate Disclaimer</a>
           </p>
           <p className="mt-2">&copy; {new Date().getFullYear()} Top Picks Weekly</p>
         </footer>

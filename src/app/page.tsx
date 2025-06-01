@@ -1,26 +1,17 @@
-<h1 className="text-blue-600 text-3xl font-bold">Tailwind is working!</h1>
-
-import WeeklyGrid from "@/components/WeeklyGrid";
-
+import mockProducts from "@/data/mockProducts";
+import ProductCard from "@/components/ProductCard";
 
 export default function HomePage() {
-  return (
-    <main className="bg-gray-50 min-h-screen">
-      <section className="bg-white py-12 shadow">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-4xl font-bold text-gray-900">🛍️ Top Picks Weekly</h1>
-          <p className="text-lg text-gray-600 mt-2">
-            Curated Amazon best-sellers — updated every week.
-          </p>
-        </div>
-      </section>
+  const featured = mockProducts.filter(p => p.featured);
 
-      <section className="py-12 px-6 max-w-6xl mx-auto">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-          This Week’s Top 10 Picks
-        </h2>
-        <WeeklyGrid />
-      </section>
-    </main>
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-10">
+      <h1 className="text-3xl font-bold mb-6">This Week’s Top Picks</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {featured.map((product, index) => (
+          <ProductCard key={index} product={product} index={index} />
+        ))}
+      </div>
+    </div>
   );
 }
