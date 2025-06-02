@@ -1,11 +1,10 @@
-// next.config.js
+// next.confi
 module.exports = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'm.media-amazon.com',
-        pathname: '/**',
       },
     ],
   },
