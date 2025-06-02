@@ -111,11 +111,11 @@ const mockProducts = [
     categoryName: "This Week's Picks"
   },
       {
-    title: "Mind Bodhi Toe Separators - Correcting Bunions and Restoring Toes to Their Original Shape - For Men and Women - Toe Spacers Bunion Corrector – Blue",
+    title: "Refrigerator Magnets 50 Pcs, 10x3mm",
    featured: true,
-    image: "https://m.media-amazon.com/images/I/71PPZ0ibcbL._SX522_.jpg",
-    summary: "Benefits: Our toe separators aid in maintaining and restoring the natural shape of toes and feet. They also enhance physical activities by improving balance, flexibility, and mobility. How they Work: Ergonomically designed, our toe spacers comfortably fit between toes, relaxing tense muscles and aiding in proper alignment. This addresses issues arising from toe compression in tight shoes, or specific foot conditions.",
-    buyLink: "https://amzn.to/4klpTaz",
+    image: "https://m.media-amazon.com/images/I/619wXODtLRL._SX522_.jpg",
+    summary: "Our round button magnets can be used as refrigerator magnets, whiteboard magnets, office magnets, craft magnets, DIY magnets, miniatures, 3d printed projcts, scientific, industrial, educational needs, jewelry-making and other hobby and home improvement projects. These small circle magnets can help storage things in home and office, and can be used on anything with magnetism.",
+    buyLink: "https://amzn.to/43YksZi",
     badge: "🔥 Trending",
     categorySlug: "This-Week's-Picks",
     categoryName: "This Week's Picks"
