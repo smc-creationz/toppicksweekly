@@ -21,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </p>
           <p className="mt-2">&copy; {new Date().getFullYear()} Top Picks Weekly</p>
         </footer>
+        <Analytics />
       </body>
     </html>
   );
