@@ -10,18 +10,28 @@ export default function Header() {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
   return (
-    <header className="bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
-      <div className="max-w-6xl mx-auto px-6 h-full flex items-center justify-between">
-        <Link href="/" className="flex items-center">
-        <Image
-          src="/images/logo.jpg"
-          alt="Top Picks Weekly Logo"
-          width={150}
-          height={150}
-          className="h-full w-auto object-contain"
-          priority
-        />
-        </Link>
+  <header
+  className="
+    bg-white dark:bg-gray-800 
+    shadow sticky top-0 z-50 
+    h-20            /* fix header at 80px tall */
+    overflow-visible /* allow logo to spill outside if needed */
+  "
+>
+  <div className="max-w-6xl mx-auto px-6 h-full flex items-center justify-between">
+    <Link href="/" className="flex items-center">
+      <Image
+        src="/images/logo.jpg"
+        alt="Top Picks Weekly Logo"
+        width={150}
+        height={150}
+        priority
+        className="
+          h-full w-auto object-contain 
+          transform scale-125 origin-top-left
+        "
+      />
+    </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden sm:flex items-center space-x-6 text-xl font-medium text-gray-800 dark:text-gray-100">
